@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url(c:\Users\efosa\Google Drive\Clients\Intersezione\Gibellini-GP810\css\skeleton.css);
+body, html {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*============= GLOBAL STYLES ==================*/
+/*main {
+    width: 100%;
+    top: 33.3%;
+}
+*/
+section {
+  position: relative;
+  z-index: 2;
+}
+
+section p {
+  color: white;
+  font-size: .7em;
+}
+
+section img {
+  width: 13%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ee183d;
+  margin-bottom: 0;
+}
+
+h4 {
+  font-size: 1.1em;
+}
+
+#chapter-01 .quick-release, #chapter-01 .tilt-lock, #chapter-01 .front-swing,
+#chapter-02 .bubbles, #chapter-02 .rear-tilt,
+#chapter-03 .unlocking-the-frame, #chapter-03 .focusing-knob,
+#chapter-04 .front-tilt, #chapter-04 .front-rise {
+  text-align: right;
+}
+
+section:nth-of-type(1), section:nth-of-type(3) {
+  height: 1600px;
+}
+
+section:nth-of-type(2), section:nth-of-type(4) {
+  height: 2200px;
+}
+
+/*================== SECTION SPECIFIC STYLES ======================*/
+.seperate-knobs, .quick-release, .tilt-lock {
+  margin-bottom: 3em;
+}
+
+.seperate-knobs, .front-shift {
+  margin-top: 3em;
+}
+
+.focusing-knob {
+  margin-top: 60%;
+}
+
+/*========================= VIDEO STYLES ======================*/
+#set-height {
+  display: block;
+}
+
+#v0 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* ========================= DOT NAV ==========================*/
+nav#dot-nav {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 2;
+}
+
+nav#dot-nav a {
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  display: block;
+  margin: 10px;
+  background: #d8d8d8;
+}
+
+nav#dot-nav a.active, nav#dot-nav a:first-child {
+  background: transparent;
+}
+/*# sourceMappingURL=app.css.map */
