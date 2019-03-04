@@ -9,14 +9,10 @@ body, html {
 }
 
 /*============= GLOBAL STYLES ==================*/
-/*main {
-    width: 100%;
-    top: 33.3%;
-}
-*/
 section {
   position: relative;
   z-index: 2;
+  height: 100vh;
 }
 
 section p {
@@ -37,6 +33,23 @@ h4 {
   font-size: 1.1em;
 }
 
+.punti {
+  background: #ffffff;
+  border: 2px solid white;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 0 2px #888;
+          box-shadow: 0 0 0 2px #888;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.punti:hover {
+  background: #ee183d;
+}
+
 #chapter-01 .quick-release, #chapter-01 .tilt-lock, #chapter-01 .front-swing,
 #chapter-02 .bubbles, #chapter-02 .rear-tilt,
 #chapter-03 .unlocking-the-frame, #chapter-03 .focusing-knob,
@@ -44,30 +57,492 @@ h4 {
   text-align: right;
 }
 
-section:nth-of-type(1), section:nth-of-type(3) {
-  height: 1600px;
-}
-
-section:nth-of-type(2), section:nth-of-type(4) {
-  height: 2200px;
-}
-
 /*================== SECTION SPECIFIC STYLES ======================*/
-.seperate-knobs, .quick-release, .tilt-lock {
-  margin-bottom: 3em;
+.seperate-knobs, .quick-release, .tilt-lock, .focusing-knob, .front-swing, .front-rise, .bubbles, .unlocking-the-frame, .homogeneus-pressure, .focusing-knob, .bellows, .entirely-machined {
+  position: relative;
 }
 
-.seperate-knobs, .front-shift {
+.seperate-knobs {
+  margin-top: 13%;
+}
+
+.seperate-knobs:after {
+  content: " ";
+  position: absolute;
+  width: 55%;
+  height: 1px;
+  background-color: white;
+  margin-top: -25px;
+  left: 0;
+}
+
+.seperate-knobs .punti {
+  right: 0;
+  left: 55%;
+  top: -15px;
+}
+
+.front-shift {
+  margin-top: 21%;
+}
+
+.front-shift .punti {
+  right: 0;
+  left: 60%;
+  top: -67px;
+}
+
+.front-shift img {
+  margin-top: 15px;
+}
+
+.front-shift h4 {
+  position: relative;
+}
+
+.front-shift h4::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 60%;
+  height: 1px;
+  background-color: white;
+  margin: 5px 0 10px 0;
+}
+
+.quick-release {
+  margin-top: -6%;
+}
+
+.quick-release .punti {
+  right: 55%;
+  left: 0;
+  top: -55px;
+  bottom: 0;
+}
+
+.quick-release img {
+  margin-top: 15px;
+}
+
+.quick-release h4 {
+  position: relative;
+}
+
+.quick-release h4::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 98%;
+  height: 1px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+.tilt-lock {
   margin-top: 3em;
 }
 
+.tilt-lock .punti {
+  right: 55%;
+  left: 0;
+  top: -58px;
+  bottom: 0;
+}
+
+.tilt-lock img {
+  margin-top: 15px;
+}
+
+.tilt-lock h4 {
+  position: relative;
+}
+
+.tilt-lock h4::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+.front-swing {
+  margin-top: 3em;
+}
+
+.front-swing .punti {
+  right: 0;
+  left: 20%;
+  top: 0;
+  bottom: 0;
+}
+
+.front-swing .punti::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 95px;
+  background-color: white;
+  -webkit-transform: translateY(-85px) translateX(-9px);
+          transform: translateY(-85px) translateX(-9px);
+}
+
+.front-swing img {
+  margin-top: 15px;
+}
+
+.front-swing h4 {
+  position: relative;
+}
+
+.front-swing h4::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 78%;
+  height: 1px;
+  left: 22%;
+  right: 0;
+  background-color: white;
+  margin: 5px 0;
+}
+
+.design {
+  margin-top: -5em;
+}
+
+.design .punti {
+  right: 0;
+  left: 100%;
+  top: 300px;
+}
+
+.design .punti::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 350px;
+  background-color: white;
+  -webkit-transform: translateY(-353px) translateX(8px);
+          transform: translateY(-353px) translateX(8px);
+}
+
+.design p {
+  position: relative;
+}
+
+.design p::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 102.3%;
+  height: 1px;
+  background-color: white;
+  margin: 5px 0 10px 0;
+}
+
+.graduated-scales {
+  margin-top: 95%;
+}
+
+.graduated-scales .punti {
+  right: 0;
+  left: 60%;
+  top: -100px;
+}
+
+.graduated-scales .punti::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 72px;
+  background-color: white;
+  -webkit-transform: translateY(0) translateX(8px);
+          transform: translateY(0) translateX(8px);
+}
+
+.graduated-scales img {
+  margin-top: 15px;
+  -webkit-transform: rotateX(60deg);
+          transform: rotateX(60deg);
+}
+
+.graduated-scales h4 {
+  position: relative;
+}
+
+.graduated-scales h4::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 62%;
+  height: 1px;
+  background-color: white;
+  margin: 5px 0 10px 0;
+}
+
+.bubbles {
+  margin-top: -8em;
+}
+
+.bubbles .punti {
+  right: 0;
+  left: 30%;
+  top: -58px;
+  bottom: 0;
+}
+
+.bubbles img {
+  margin-top: 15px;
+}
+
+.bubbles p {
+  position: relative;
+}
+
+.bubbles p::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 68%;
+  height: 1px;
+  background-color: white;
+  margin: 5px 0 0 0;
+  right: 0;
+}
+
+.rear-tilt {
+  margin-top: 27em;
+}
+
+.rear-tilt .punti {
+  right: 0;
+  left: 20%;
+  top: -111px;
+  bottom: 0;
+}
+
+.rear-tilt img {
+  margin-top: 15px;
+}
+
+.rear-tilt h4 {
+  position: relative;
+}
+
+.rear-tilt h4::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 76%;
+  height: 1px;
+  background-color: white;
+  margin: 5px 0;
+  right: 0;
+}
+
+.homogeneus-pressure {
+  margin-top: -5em;
+}
+
+.homogeneus-pressure .punti {
+  right: 0;
+  left: 40%;
+  top: -30px;
+}
+
+.homogeneus-pressure p {
+  position: relative;
+}
+
+.homogeneus-pressure p::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 40%;
+  height: 1px;
+  background-color: white;
+  margin: 5px 0 10px 0;
+}
+
+.unlocking-the-frame {
+  margin-top: -35%;
+}
+
+.unlocking-the-frame .punti {
+  right: 0;
+  left: -25%;
+  top: -82px;
+  bottom: 0;
+}
+
+.unlocking-the-frame img {
+  margin-top: 15px;
+}
+
+.unlocking-the-frame p {
+  position: relative;
+  margin-bottom: 0;
+}
+
+.unlocking-the-frame p::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 124.5%;
+  height: 1px;
+  background-color: white;
+  margin: 5px 0;
+  right: 0;
+}
+
 .focusing-knob {
-  margin-top: 60%;
+  margin-top: 85%;
+}
+
+.focusing-knob .punti {
+  right: 0;
+  left: -45%;
+  top: 0;
+  bottom: 0;
+}
+
+.focusing-knob h4 {
+  position: relative;
+}
+
+.focusing-knob h4::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 145%;
+  height: 1px;
+  right: 0;
+  background-color: white;
+  margin-top: 8px;
+}
+
+.bellows {
+  margin-top: 5em;
+}
+
+.bellows .punti {
+  right: 0;
+  left: 65%;
+  top: -135px;
+}
+
+.bellows p:nth-of-type(2) {
+  position: relative;
+}
+
+.bellows p:nth-of-type(2)::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 65%;
+  height: 1px;
+  background-color: white;
+  margin: 5px 0 10px 0;
+}
+
+.entirely-machined {
+  margin-top: 50%;
+}
+
+.entirely-machined .punti {
+  right: 0;
+  left: 105%;
+  top: -65px;
+}
+
+.entirely-machined::before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 105%;
+  height: 1px;
+  background-color: white;
+  bottom: 75px;
+}
+
+.front-tilt {
+  margin-top: -10em;
+}
+
+.front-tilt .punti {
+  right: 0;
+  left: -15px;
+  top: 225px;
+  bottom: 0;
+}
+
+.front-tilt .punti::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 305px;
+  background-color: white;
+  -webkit-transform: translateY(-303px) translateX(-8px);
+          transform: translateY(-303px) translateX(-8px);
+}
+
+.front-tilt img {
+  margin-top: 15px;
+}
+
+.front-tilt h4 {
+  position: relative;
+}
+
+.front-tilt h4::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 101%;
+  height: 1px;
+  background-color: white;
+  margin: 5px 0;
+  right: 0;
+}
+
+.front-rise {
+  margin-top: 12em;
+}
+
+.front-rise .punti {
+  right: 0;
+  left: 10%;
+  top: -108px;
+  bottom: 0;
+}
+
+.front-rise img {
+  margin-top: 15px;
+}
+
+.front-rise h4 {
+  position: relative;
+}
+
+.front-rise h4::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 90%;
+  height: 1px;
+  background-color: white;
+  margin: 5px 0;
+  right: 0;
 }
 
 /*========================= VIDEO STYLES ======================*/
+/*height will set the maximum scroll boundry for the clip*/
 #set-height {
   display: block;
+  height: 900px;
 }
 
 #v0 {
